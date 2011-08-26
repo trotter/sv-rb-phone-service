@@ -9,6 +9,6 @@ end
 post '/when-is-meeting' do
   xml = Builder::XmlMarkup.new
   xml.Response do |resp|
-    resp.Say "Jose Valim Speaks about Rails 3.1"
+    resp.Say "Jose Valim Speaks about Rails 3.1 on Thursday September 15th at Carnegie Mellon, Building 23 at NASA"
   end
 end
