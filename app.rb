@@ -19,7 +19,7 @@ post '/when-is-meeting' do
 
     about_event = html.xpath('//h1[@itemprop="summary"]').text
     about_event << " on "
-    about_event << html.xpath('//p[@class="headline"]').text.gsub("\n", " ")
+    about_event << html.xpath('//time/p[@class="headline"]').text.gsub("\n", " ")
     about_event << " at "
     about_event << html.xpath('//div[@id="event-where-display"]/span[@itemprop="locality"]').text.gsub("\n", " ")
 
